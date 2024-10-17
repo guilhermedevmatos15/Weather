@@ -15,9 +15,11 @@
          src="https://kit.fontawesome.com/401b17d60b.js"
          crossorigin="anonymous"
       ></script>
+      <!-- ? AOS -->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
    </head>
    <body>
-      <main>
+      <main data-aos="zoom-in" data-aos-duration="1600">
          <form>
             <input type="text" maxlength="30" />
             <button class="btn">
@@ -25,36 +27,41 @@
             </button>
          </form>
 
-         <div class="result">
-            <div class="result-initial">
+         <div class="result ok">
+            <div class="init">
                <p>Do your research!</p>
             </div>
 
-            <div class="result-error">
-               <img src="./assets/img/error" alt="Error" />
+            <div class="error">
+               <img src="./assets/img/error.svg" alt="Error" />
                <p>Opss... We didn't find this location, <em>try again!</em></p>
             </div>
 
-            <div class="result-ok">
-               <img src="" alt="climate" />
-               <h1><span class="temp"></span>°C</h1>
-               <h2 class="city"></h2>
+            <div class="ok">
+               <h1><span class="temp">40</span>°C</h1>
+               <h2 class="city">New York</h2>
 
                <div class="details">
                   <div class="humidity">
                      <i class="fa-solid fa-water"></i>
-                     <strong><span class="percent"></span>%</strong>
+                     <strong><span class="percent">55</span>%</strong>
                      <p>Humidity</p>
                   </div>
 
                   <div class="wind">
                      <i class="fa-solid fa-wind"></i>
-                     <strong><span class="percent"></span>%</strong>
+                     <strong><span class="percent">66</span>%</strong>
                      <p>Wind Speed</p>
                   </div>
                </div>
             </div>
          </div>
       </main>
+
+      <!-- ? AOS (JS) -->
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+         AOS.init();
+      </script>
    </body>
 </html>
