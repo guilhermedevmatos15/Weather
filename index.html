@@ -10,8 +10,51 @@
       <link rel="stylesheet" href="./assets/css/styles.css" />
       <!-- ? JS -->
       <script src="./assets/js/main.js" type="module" defer></script>
+      <!-- ? FontAwesome -->
+      <script
+         src="https://kit.fontawesome.com/401b17d60b.js"
+         crossorigin="anonymous"
+      ></script>
    </head>
    <body>
-      
+      <main>
+         <form>
+            <input type="text" maxlength="30" />
+            <button class="btn">
+               <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+         </form>
+
+         <div class="result">
+            <div class="result-initial">
+               <p>Do your research!</p>
+            </div>
+
+            <div class="result-error">
+               <img src="./assets/img/error" alt="Error" />
+               <p>Opss... We didn't find this location, <em>try again!</em></p>
+            </div>
+
+            <div class="result-ok">
+               <img src="" alt="climate" />
+               <h1><span class="temp"></span>°C</h1>
+               <h2 class="city"></h2>
+
+               <div class="details">
+                  <div class="humidity">
+                     <i class="fa-solid fa-water"></i>
+                     <strong><span class="percent"></span>%</strong>
+                     <p>Humidity</p>
+                  </div>
+
+                  <div class="wind">
+                     <i class="fa-solid fa-wind"></i>
+                     <strong><span class="percent"></span>%</strong>
+                     <p>Wind Speed</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
    </body>
 </html>
