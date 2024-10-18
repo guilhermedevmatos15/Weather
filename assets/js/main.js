@@ -18,7 +18,6 @@ async function callAPI(url) {
       const data = await response.json();
       return data;
    } catch (e) {
-      console.log(e);
       throw e; // Repassa o erro para o catch no .then().catch()
    }
 }

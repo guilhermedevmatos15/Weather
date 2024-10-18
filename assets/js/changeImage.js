@@ -24,7 +24,8 @@ export default function changeBg(situation) {
       case 'drizzle':
          body.style.backgroundImage = 'url(assets/img/bg/storm.jpg)';
          break;
-      case 'thunderstorm ':
+      case 'thunderstorm':
+      case 'rain':
          body.style.backgroundImage = 'url(assets/img/bg/rain.jpg)';
          break;
       case 'snow':
