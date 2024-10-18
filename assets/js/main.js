@@ -1,5 +1,5 @@
 import changeBg from './changeImage.js';
-import { fahrenheitForCelsius } from './convertTemp.js';
+import { kelvinToCelsius } from './convertTemp.js';
 
 const resultDiv = document.querySelector('.result');
 const okResult = document.querySelector('.result .ok');
@@ -37,7 +37,7 @@ form.addEventListener('submit', (e) => {
             resultDiv.classList.remove('init', 'error');
             resultDiv.classList.add('ok');
 
-            okResult.querySelector('h1').innerHTML = `${fahrenheitForCelsius(data.main.temp)}°C`;
+            okResult.querySelector('h1').innerHTML = `${kelvinToCelsius(data.main.temp)}°C`;
             okResult.querySelector('h2').innerHTML = `${data.name}, ${data.sys.country}`;
             okResult.querySelector('.humidity strong').innerHTML = `${data.main.humidity}%`;
             okResult.querySelector('.wind strong').innerHTML = `${data.wind.speed}%`;
@@ -49,12 +49,5 @@ form.addEventListener('submit', (e) => {
          resultDiv.classList.remove('init', 'ok');
          resultDiv.classList.add('error');
          changeBg('error');
-
-         console.log(e);
-
-         // Waiting a little until the bg changes and we present the error
-         setTimeout(() => {
-            alert('Sorry, but maybe you mistyped the location');
-         }, 200);
       });
 });

@@ -1,3 +1,3 @@
-export function fahrenheitForCelsius(fahrenheit) {
-   return ((fahrenheit - 32) / 9/5).toFixed(0).toString().replace('.', ',');
+export function kelvinToCelsius(kelvin) {
+   return Math.floor(kelvin - 273.15);
 }
